@@ -1,0 +1,8 @@
+<p>
+    apiservice works! this will be displayed in index.html
+  </p>
+  <ul *ngIf="custlist!=undefined" class="timeline">
+    <li *ngFor="let lst of custlist, let i=index">
+      {{lst.id}}{{lst.name}}
+    </li>
+  </ul>

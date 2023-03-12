@@ -5,8 +5,11 @@ import { Customer } from './customerModel';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiserviceService {
+export class ApiserviceService {   
 
+  //this is observable data to be observed by its caller such as app.component.ts
+  //app.component.ts should subscribe those data publisher/subcribe pattern
+  
   constructor(public httpclient:HttpClient) { }
 
   readonly _baseUrl = "https://localhost:7129/api/"

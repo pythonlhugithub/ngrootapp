@@ -352,46 +352,16 @@
   </div>
 
   <div>
-    <p>applicaiton test result: </p>
-
-    <table>
-      <tr>
-        <td>Id</td>  
-        <td>Name</td>  
-        <td>Address</td>  
-        <td>City</td>  
-        <td>Region</td>  
-        <td>PostalCode</td>  
-        <td>Country</td> 
-        </tr>
-     
-      
- 
-         
-          <tr *ngFor="let data of cust;">
-            <td>{{data["Id"]}}</td>
-            <td>{{data["Name"]}}</td>
-            <td>{{data["Address"]}}</td>
-            <td>{{data["City"]}}</td>
-            <td>{{data["Region"]}}</td>
-            <td>{{data["PostalCode"]}}</td>
-            <td>{{data["Country"]}}</td>   
-    
-          </tr>
-        
-   
-
-
-
+    <p>sevice is called here, but no ngfor available due to it is a service</p>
+    <lib-apiservice></lib-apiservice>
+    <p>{{cust}}</p>
+    <table *ngFor="let itm of cust">
+      <tr *ngFor="let itmsub of itm">
+        <td>{{itmsub.id}}</td>  <td>{{itmsub.name}}</td><td>{{itmsub.address}}</td><td>{{itmsub.region}}</td>  <td>{{itmsub.country}}</td><td>{{itmsub.email}}</td>
+      </tr>
     </table>
-   <ul>
-      <li *ngFor="let role of cust">{{role .id}}- {{role.name}}</li>
-   
-   </ul>
-    
-
-
   </div>
+  
 
   <!-- Resources -->
   <h2>Resources</h2>

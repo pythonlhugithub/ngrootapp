@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ApiserviceComponent } from 'projects/apiservice/src/public-api';
 import {ApiserviceService} from 'projects/apiservice/src/lib/apiservice.service'
 import { Customer } from 'projects/apiservice/src/lib/customerModel';
+import { Observable } from 'rxjs/internal/Observable';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,19 +10,10 @@ import { Customer } from 'projects/apiservice/src/lib/customerModel';
 })
 export class AppComponent {
   title = 'apicliz';
-
- cust:any[]=[];
-
-  constructor(public apicall:ApiserviceService){
-  console.log(this.apicall.getcustomer());
-
-  this.apicall.getcustomer().forEach(lst=>{
-    this.cust.push(lst);
-  });
-
-   
- 
-  }
-
+  cust:any[]=[];
+constructor(public apicall:ApiserviceService)
+  {
+  this.apicall.getcustomer().subscribe(lst=>{this.cust.push(lst)});
+  };
   
 }

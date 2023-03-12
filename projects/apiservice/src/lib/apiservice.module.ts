@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { ApiserviceComponent } from './apiservice.component';
 
 
@@ -7,7 +8,7 @@ import { ApiserviceComponent } from './apiservice.component';
   declarations: [
     ApiserviceComponent
   ],
-  imports: [
+  imports: [BrowserModule
   ],
   exports: [
     ApiserviceComponent
