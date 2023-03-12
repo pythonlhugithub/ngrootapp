@@ -21,4 +21,12 @@ postcustomer(){
   return this.httpclient.post(this._baseUrl+"customers", this.formdata);
 }
 
+putcustomer(){
+  return this.httpclient.put(this._baseUrl+"customers/${this.formData.id}", this.formdata);
+}
+
+deletecustomer(id:number){
+  return this.httpclient.delete(this._baseUrl+"customers/${id}");
+}
+
 }
