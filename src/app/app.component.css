@@ -20,4 +20,8 @@ margin-bottom: auto;
 margin-right: 20px;
 background-color: darkgrey;
 }
- 
+.apidata{
+    background-color: gold;
+    font: var(auto);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
