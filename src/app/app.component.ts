@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { ApiserviceComponent } from 'projects/apiservice/src/public-api';
 import {ApiserviceService} from 'projects/apiservice/src/lib/apiservice.service'
-import { Customer } from 'projects/apiservice/src/lib/customerModel';
-import { Observable } from 'rxjs/internal/Observable';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,6 +11,6 @@ export class AppComponent {
 constructor(public apicall:ApiserviceService)
   {
   this.apicall.getcustomer().subscribe(lst=>{this.cust.push(lst)});
-  };
+  }
   
 }

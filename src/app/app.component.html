@@ -352,14 +352,21 @@
   </div>
 
   <div>
-    <p>sevice is called here, but no ngfor available due to it is a service</p>
-    <lib-apiservice></lib-apiservice>
-    <p>{{cust}}</p>
-    <table *ngFor="let itm of cust">
+    <table class="table" >
+    <thead>
+      <td>Id</td><td>Name</td><td>Address</td><td>Region</td><td>Email</td>
+    </thead>
+    <tbody *ngFor="let itm of cust">
       <tr *ngFor="let itmsub of itm">
-        <td>{{itmsub.id}}</td>  <td>{{itmsub.name}}</td><td>{{itmsub.address}}</td><td>{{itmsub.region}}</td>  <td>{{itmsub.country}}</td><td>{{itmsub.email}}</td>
+        <td>{{itmsub.id}}</td>  
+        <td>{{itmsub.name}}</td>
+        <td>{{itmsub.address}}</td>
+        <td>{{itmsub.region}}</td>  
+        <td>{{itmsub.email}}</td>
       </tr>
+    </tbody>
     </table>
+
   </div>
   
 
