@@ -25,3 +25,11 @@ background-color: darkgrey;
     font: var(auto);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.menuintop{
+    background-color: darkseagreen;
+    margin-left: 10px;
+    font-size: medium;
+    flex-grow: calc();
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkblue;
+}

@@ -1,5 +1,5 @@
 export class Customer{
-    Id :string; 
+   Id :string; 
     Name:string;  
     Address:string;
     City :string;  
@@ -10,7 +10,7 @@ export class Customer{
     Email :string;
     
     constructor() {
-       this.Id ="";
+     this.Id ="";
        this.Name=""; 
        this.Address=""; 
        this.City=""; 

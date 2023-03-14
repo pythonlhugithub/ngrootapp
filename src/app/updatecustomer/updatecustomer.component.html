@@ -1,0 +1,32 @@
+
+<div class="formadd">
+    <table>
+      <tr>
+          <td>  <label title="Id">Id</label></td><td> <input type="text" class="form-control" id="id"  required value="{{model.id}}" name="id"></td>
+      </tr>
+  
+      <tr>
+          <td>  <label title="Id">Name</label></td><td> <input type="text" class="form-control" id="name"  required value="{{model.name}}" name="name"></td>
+      </tr>    <tr>
+          <td> <label title="Id">Address</label></td><td> <input type="text" class="form-control" id="address"  required value="{{model.address}}" name="address"></td>
+      </tr>    <tr>
+          <td> <label title="Id">City</label></td><td> <input type="text" class="form-control" id="city"  required value="{{model.city}}" name="city"></td>
+      </tr>    <tr>
+          <td> <label title="Id">Region</label></td><td> <input type="text" class="form-control" id="region"  required value="{{model.region}}" name="region"></td>
+      </tr>    <tr>
+          <td>  <label title="Id">Zipcode</label></td><td><input type="text" class="form-control" id="postalcode"  required value="{{model.postalCode}}" name="postalcode"></td>
+      </tr>    <tr>
+          <td><label title="Id">Phone</label></td><td> <input type="text" class="form-control" id="phone"  required value="{{model.phone}}" name="phone"></td>
+      </tr>    <tr>
+          <td>  <label title="Id">Email</label></td><td> <input type="text" class="form-control" id="email"  required value="{{model.email}}" name="email"></td>
+      </tr>    <tr>
+          <td></td><td><button type="button" (click)="putycustomer(model.id)">Update a Customer</button></td>
+      </tr>    <tr>
+          <td></td><td> <label title="Id" id="notify"> {{notify}}</label></td>
+      </tr>
+  
+    </table>
+   
+      
+      
+  </div>

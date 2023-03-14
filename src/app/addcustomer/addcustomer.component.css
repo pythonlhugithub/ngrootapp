@@ -1,0 +1,20 @@
+
+     
+    form{
+        background-color: aqua;
+        width: 100% ;
+    }
+    .formadd{
+        width: 100%;
+        background-color:green;
+    }
+    .formadd label{
+        align-items: left;
+    }
+    .formadd input{
+        align-items: right;
+    }
+    table{
+        width: 100%;
+        color: white;
+    }
