@@ -370,6 +370,7 @@
     <table class="table" >
     <thead>
       <td>Id</td><td>Name</td><td>Address</td><td>Region</td><td>Email</td>
+      <td>City</td><td>Phone</td><td>Country</td><td>Region</td>
     </thead>
     <tbody *ngFor="let itm of cust">
       <tr *ngFor="let itmsub of itm">
@@ -378,6 +379,10 @@
         <td>{{itmsub.address}}</td>
         <td>{{itmsub.region}}</td>  
         <td>{{itmsub.email}}</td>
+        <td>{{itmsub.city}}</td>
+        <td>{{itmsub.phone}}</td>
+        <td>{{itmsub.country}}</td>  
+        <td>{{itmsub.region}}</td>
       </tr>
     </tbody>
     </table>

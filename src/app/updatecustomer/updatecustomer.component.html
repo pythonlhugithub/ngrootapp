@@ -1,4 +1,40 @@
 
+<div id="apidata">
+
+    <table class="table" >
+        <tr><td>Id</td> <td><input type=text value="{{model.id}}" id="Id" name="Id" [(ngModel)]="model.id"></td>  </tr>
+        <tr><td></td><td><button type="button" (click)="getecustomer(model.id)">Get a Customer</button></td></tr>   
+ 
+  </table>
+
+    <br/>
+    <table class="table" >
+          <tr><td>Id</td> <td><input type=text value="{{model.id}}" id="Id" name="Id" [(ngModel)]="model.id"></td>  </tr>
+       <tr><td>Name</td> <td><input type=text value="{{model.name}}" id="Name" name="Name" [(ngModel)]="model.name"></td></tr>
+       <tr><td>Address</td> <td><input type=text value="{{model.address}}" id="Address" name="Address" [(ngModel)]="model.address"></td></tr>
+       <tr><td>Region</td> <td><input type=text value="{{model.region}}" id="Region" nam e="Region" [(ngModel)]="model.region"></td></tr>
+       <tr><td>Postalcode</td> <td><input type=text value="{{model.postalCode}}" id="Postalcode" name="Postalcode" [(ngModel)]="model.postalCode"></td></tr>
+       <tr><td>Phone</td> <td><input type=text value="{{model.phone}}" id="Phone" name="Phone" [(ngModel)]="model.phone"></td></tr>
+       <tr><td>City</td> <td><input type=text value="{{model.city}}" id="City" name="City" [(ngModel)]="model.city"></td></tr>
+       <tr><td>Email</td> <td><input type=text value="{{model.email}}" id="Email" name="Email" [(ngModel)]="model.email"></td></tr>
+       <tr><td>Country</td> <td><input type=text value="{{model.country}}" id="Country" name="Country" [(ngModel)]="model.country"></td></tr>
+       <tr><td></td><td><button type="button" (click)="putycustomer()">Update a Customer</button></td></tr>   
+        <tr><td col="2"> <label title="Id" id="notify"> {{notify}}</label></td></tr>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <div class="formadd">
     <table>
       <tr>
@@ -20,7 +56,7 @@
       </tr>    <tr>
           <td>  <label title="Id">Email</label></td><td> <input type="text" class="form-control" id="email"  required value="{{model.email}}" name="email"></td>
       </tr>    <tr>
-          <td></td><td><button type="button" (click)="putycustomer(model.id)">Update a Customer</button></td>
+          <td></td><td><button type="button" (click)="putycustomer()">Update a Customer</button></td>
       </tr>    <tr>
           <td></td><td> <label title="Id" id="notify"> {{notify}}</label></td>
       </tr>
@@ -29,4 +65,4 @@
    
       
       
-  </div>
+  </div> -->

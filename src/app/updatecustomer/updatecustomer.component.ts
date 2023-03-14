@@ -10,36 +10,35 @@ import { ApiserviceService } from 'projects/apiservice/src/public-api';
 })
 export class UpdatecustomerComponent implements OnInit {
 
-  model: any;
 
 notify:string="";
 
-constructor(private service:ApiserviceService, private router: Router) { }
+model:Customer=new Customer();
 
+constructor(private service:ApiserviceService, private router: Router) { }
 
   ngOnInit(): void 
   { //when controller is loaded, existing record needs to be retrieved.
-  
-
-    this.service.getacustomer("877").subscribe(upt=>{
-      this.model=upt;
-      console.log(this.model);
-    });
-
-
+    this.edited=false;
   }
 
+public edited:boolean=false;
+  getecustomer(id:string){
+    this.service.getacustomer(id).subscribe(upt=>{
+      this.model=<Customer>upt;
+      this.edited=!this.edited;
+      console.log(this.edited);
 
+    });
+  }
+
+  showValue(event: any){
+    this.model.id = event.target.value;
+  }
   putycustomer(){
-
-    this.service.formdata=this.model;
-
-   console.log(this.service.formdata);
-
-  this.service.putcustomer(this.service.formdata.Id).subscribe(puy=>{
-
-    console.log(puy);
-
+  this.service.formdata=this.model;
+  this.service.putcustomer(this.service.formdata.id).subscribe(puy=>{
+    window.location.reload();
     return puy;
   });
 }
