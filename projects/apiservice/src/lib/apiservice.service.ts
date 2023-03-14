@@ -10,7 +10,9 @@ export class ApiserviceService {
   //this is observable data to be observed by its caller such as app.component.ts
   //app.component.ts should subscribe those data publisher/subcribe pattern
   
-  constructor(public httpclient:HttpClient) { }
+  constructor(public httpclient:HttpClient) { 
+
+  }
 
   readonly _baseUrl = "https://localhost:7129/api/"
   formdata:Customer =new Customer();
@@ -24,12 +26,19 @@ postcustomer(){
   return this.httpclient.post(this._baseUrl+"customers", this.formdata);
 }
 
-putcustomer(){
-  return this.httpclient.put(this._baseUrl+"customers/${this.formData.id}", this.formdata);
+putcustomer(id:string){
+  return this.httpclient.put(this._baseUrl+"customers/"+id,  this.formdata);
 }
 
-deletecustomer(id:number){
-  return this.httpclient.delete(this._baseUrl+"customers/${id}");
+deletecustomer(id:string){
+  return this.httpclient.delete(this._baseUrl+"customers/"+id);
 }
+
+
+getacustomer(id:string)
+{
+  return this.httpclient.get(this._baseUrl+"customers/"+id);
+}
+
 
 }

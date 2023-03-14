@@ -1,0 +1,17 @@
+
+<div class="formadd">
+    <table>
+      <tr>
+          <td>  <label title="Id">Id</label></td><td> <input type="text" class="form-control" id="id"  required  [(ngModel)]="model.id" name="id"></td>
+      </tr>
+     <tr>
+          <td></td><td><button type="button" (click)="delcustomer(model.id)">Delete a Customer</button></td>
+      </tr>    <tr>
+          <td></td><td> <label title="Id" id="notify"> {{notify}}</label></td>
+      </tr>
+  
+    </table>
+   
+      
+      
+  </div>
